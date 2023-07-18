@@ -1,15 +1,13 @@
 package main
 
-// require to run the following
-// go run file.go file2.go
+import "fmt"
 
 func main() {
 
 	// we use := when initializing for the first time
-	//card := newCard()
+	card := newCard()
 
-	//fmt.Println(printState())
-	printState()
+	fmt.Println(card)
 }
 
 func newCard() string {
