@@ -6,6 +6,7 @@ func main() {
 	cards = append(cards, "Six of Spades")
 
 	cards.print()
+
 }
 
 func newCard() string {
