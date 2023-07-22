@@ -8,4 +8,8 @@ func main() {
 
 	hand.print()
 	remainingDeck.print()
+
+	cards.saveToFile("my_deck")
+	d := newDeckFromFile("my_deckx")
+	d.print()
 }
