@@ -1,15 +1,12 @@
 package main
 
 import (
-<<<<<<< HEAD
-	"math/rand"
-	"time"
-=======
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
->>>>>>> chapter/convert-string-slice-to-byte-slice
+	"time"
 )
 
 type deck []string
