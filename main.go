@@ -9,7 +9,13 @@ func main() {
 	hand.print()
 	remainingDeck.print()
 
+<<<<<<< HEAD
 	cards.print()
 	cards.shuffle()
 	cards.print()
+=======
+	cards.saveToFile("my_deck")
+	d := newDeckFromFile("my_deckx")
+	d.print()
+>>>>>>> chapter/convert-string-slice-to-byte-slice
 }

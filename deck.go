@@ -1,8 +1,15 @@
 package main
 
 import (
+<<<<<<< HEAD
 	"math/rand"
 	"time"
+=======
+	"fmt"
+	"io/ioutil"
+	"os"
+	"strings"
+>>>>>>> chapter/convert-string-slice-to-byte-slice
 )
 
 type deck []string
@@ -41,4 +48,22 @@ func (d deck) shuffle() {
 		newPosition := r.Intn(len(d) - 1)
 		d[i], d[newPosition] = d[newPosition], d[i]
 	}
+}
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",")
+}
+
+func (d deck) saveToFile(fileName string) error {
+	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
+}
+
+func newDeckFromFile(fileName string) deck {
+	bs, err := ioutil.ReadFile(fileName)
+	if err != nil {
+
+		fmt.Println("Error:", err)
+		os.Exit(1)
+	}
+	s := strings.Split(string(bs), ",")
+	return deck(s)
 }
