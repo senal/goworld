@@ -8,4 +8,8 @@ func main() {
 
 	hand.print()
 	remainingDeck.print()
+
+	cards.print()
+	cards.shuffle()
+	cards.print()
 }
