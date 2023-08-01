@@ -27,7 +27,7 @@ func printArea(s Shape) {
 }
 
 func (t traingale) getArea() float64 {
-	return t.height * t.base * 0.5
+	return 0.5 * t.height * t.base
 }
 
 func (s square) getArea() float64 {
