@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 /*
 Create a programe that reads the content of a text file then prints its contents to the terminal.
 
@@ -16,5 +21,13 @@ If the 'File' type implements the 'Reader' interface, you might be able to reuse
 */
 
 func main() {
+	// open a file io.Open() which returns a *File, error
+	// pass the *File to
+	bs, err := os.ReadFile(os.Args[1])
 
+	if err != nil {
+		os.Exit(-1)
+	}
+
+	fmt.Println(string(bs))
 }
