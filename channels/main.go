@@ -26,7 +26,6 @@ func main() {
 			checkLink(link, c)
 		})(l)
 	}
-
 }
 
 func checkLink(link string, c chan string) {
